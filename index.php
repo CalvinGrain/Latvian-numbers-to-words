@@ -1,11 +1,13 @@
 <?php
 require_once 'lvnumtowords.php';
-echo toCurrency('1337');
+$num = new lvnumtowords();
+
+echo $num->toCurrency('9999.99');
 echo "<br/>";
-echo toCurrency('1337.22');
+echo $num->toCurrency('1337.22');
 echo "<br/>";
-echo toCurrency('0.22');
+echo $num->toCurrency('0.22');
 echo "<br/>";
-echo toCurrency('1,22');
+echo $num->toCurrency('1,22');
 echo "<br/>";
-echo toCurrency('1,00');
+echo $num->toCurrency('1,00');
