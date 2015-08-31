@@ -46,22 +46,22 @@ class lvnumtowords
 		$decimals='00';
 		$digits = array('00','viens','divi','trīs','četri','pieci','seši','septiņi','astoņi','deviņi');
 		$prefix = array('','vien','div','trīs','četr','piec','seš','septiņ','astoņ','deviņ');
-		$ending = array('desmit','padsmit','simt', 'tūkstoš');
-		$single = array('simts','tūkstots');
-		$lots = array('simt','simti','tūkstoš','tūkstoši');
-		
+		$ending = array('desmit','padsmit');
+		$single = array('simts','tūkstotis');
+		$lots = array('simti','tūkstoši');
+
 		//Thousands
 		if($this->thousands!=0)
 		{
-			if($this->thousands==1) $this->result.= $single[1];
-			else $this->result.= $prefix[$this->thousands].$lots[2];
+			if($this->thousands==1) $this->result.= $digits[$this->thousands].' '.$single[1];
+			else $this->result.= $digits[$this->thousands].' '.$lots[1];
 			$this->result.=' ';
 		}
 		//Hundreds
 		if($this->hundreds!=0)
 		{
 			if($this->hundreds==1) $this->result.= $single[0];
-			else $this->result.= $prefix[$this->hundreds].$lots[0];
+			else $this->result.= $digits[$this->hundreds].' '.$lots[0];
 			$this->result.=' ';
 		}
 		//Tens
