@@ -90,6 +90,7 @@ class lvnumtowords
 		$this->result = "";
 		$text = array('un ','eiro ','cents','centi');
 		$number = str_replace(array('.',','),'.',$number);
+		$decimals = 0;
 
 		if(strpos($number,'.')>0)
 		{
