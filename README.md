@@ -8,17 +8,17 @@ Examples:
 require_once 'lvnumtowords.php';
 $num = new lvnumtowords();
 
-echo $num->toCurrency('9999.99');
-//deviņtūkstoš deviņsimt deviņdesmit deviņi eiro un deviņdesmit deviņi centi
+echo $num->toCurrency('9999');
+//deviņtūkstoš deviņsimt deviņdesmit deviņi eiro un 00 centi
 
 echo $num->toCurrency('1337.22');
-//tūkstots trīssimt trīsdesmit septiņi eiro un divdesmit divi centi
+//tūkstots trīssimt trīsdesmit septiņi eiro un 22 centi
 
 echo $num->toCurrency('0.22');
-//00 eiro un divdesmit divi centi
+//00 eiro un 01 cents
 
 echo $num->toCurrency('1,22');
-//viens eiro un divdesmit divi centi
+//viens eiro un 22 centi
 
 echo $num->toCurrency('1,00');
 //viens eiro un 00 centi
