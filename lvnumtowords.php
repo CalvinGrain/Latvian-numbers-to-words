@@ -107,7 +107,7 @@ class lvnumtowords
 		{
 			$this->result.=$text[0];
 			$this->check_length($decimals);
-			$this->convert_to_words();
+			$this->result.=$decimals.' ';
 			$this->result.=$text[(($this->ones==1)?2:3)];
 		}
 		else
